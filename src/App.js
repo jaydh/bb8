@@ -25,7 +25,7 @@ function App() {
           ].map(option => {
             const ref = React.createRef();
             return (
-              <ListItem>
+              <ListItem key={option.value}>
                 <audio src={option.path} ref={ref} preload="auto" />
                 <Button onClick={() => ref.current.play()}>
                   {option.value}
